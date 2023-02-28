@@ -4,7 +4,7 @@ public class Caja {
     protected int fondo;
     protected String etiqueta;
     // Unidad en private para que no exista un método público para modificar la unidad y que se quede la definida en
-    // el constructor de Caja
+    // el constructor de Caja de abajo
     private Unidad unidad;
 
     Caja (int ancho, int alto, int fondo, Unidad unidad){
