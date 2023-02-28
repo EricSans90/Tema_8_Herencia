@@ -1,8 +1,10 @@
 public class Caja {
-    private int ancho;
-    private int alto;
-    private int fondo;
-    private String etiqueta;
+    protected int ancho;
+    protected int alto;
+    protected int fondo;
+    protected String etiqueta;
+    // Unidad en private para que no exista un método público para modificar la unidad y que se quede la definida en
+    // el constructor de Caja
     private Unidad unidad;
 
     Caja (int ancho, int alto, int fondo, Unidad unidad){
@@ -17,7 +19,7 @@ public class Caja {
         this.etiqueta="";
     }
 
-    double getVolumen(){
+    public double getVolumen(){
         double volumenTotal=0;
         if (this.unidad == Unidad.M){
             volumenTotal = this.ancho*this.alto*this.fondo;
@@ -28,7 +30,7 @@ public class Caja {
         }
     }
 
-    void setEtiqueta(String etiqueta){
+    public void setEtiqueta(String etiqueta){
         this.etiqueta=etiqueta;
     }
 
